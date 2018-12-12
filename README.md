@@ -24,6 +24,34 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
 - Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. Kursta kullanacağımız aşağıdaki iki kütüphanenin kurulu olduğuna emin olun.
  
     pip install opencv-python
+    
     pip install imageio
+    
+ ### Tensorflow Object Detection Kurulumu 
+
+- TensorFlow Object Detection API'ı indirin. https://github.com/tensorflow/models
+
+- Masaüstünde tensorflow1 isminde klasör oluşturup indirdiğiniz models klasörünü bu klasörün içine atın. models-master ismini basitleştirmek için models yapabilirsiniz.Benim bilgisayarımda dosya yolu  "home\sedefkilicceken\Desktop\tensorflow1\models\research\object_detection" ve object_detection klasörü içerisinde işlem yapılacaktır.
+
+ - Eğitim yapabilmek için bilgisayarınızın özelliklerine en uygun olan modeli
+ https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md den indilebilirsiniz.Bize uygun olan model olarak  Faster-RCNN-Inception-V2-COCO'yu indirin. tar.gz dosyasını object detection klasörüne çıkartın.  
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     

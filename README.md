@@ -64,7 +64,7 @@ Virtual environment aktifleştiyse parantez içerisinde (tensorflow1) göreceksi
  ## 2. RESİM TOPLAYIP ETİKETLEME
 
 Kendi istediğiniz nesneleri eğitmek istiyorsanız öncelikle bir dataset oluşturmanız lazım. İnternetten veya kendi çektiğiniz foroğraflarla belli bir sayıda resim toplayın. Resimler farklı ortamlarda olursa daha güçlü bir model eğitebilirsiniz. Nesnenin sadece tek bir açıdan çekilmiş resimlerini kullanırsanız iyi sonuçlar almazsınız. Yani datasetinizde çeşitlilik bol olsun. Nesnenin bazı yerleri kapatılmış şekilde ve farklı ışıklandırmalarda resimleri toplayın. 
-
+Biz projjemizde AZİZ SANCAR'ın datasetini topladık.
 
 Resimleri topladıktan sonra %20'sini \object_detection\images\test klasörüne %80'ini \object_detection\images\train klasörüne atın.
 
@@ -75,6 +75,10 @@ Github: https://github.com/tzutalin/labelImg
 ![labelImg](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg)
  
 ![labelImg](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo.jpg)
+
+    
+ ![screenshot from 2018-12-01 06-43-42](https://user-images.githubusercontent.com/45830441/49906023-2e8c8f00-fe81-11e8-8787-160a88d1ee43.png)
+    
 
  Her etiketlediğiniz resim için .xml dosyası oluşturulacak. Bu .xml dosyaları tfrecords'a çevirilerek eğitim yapılacak. 
  Test ve train klasörleri içerisindeki her resim için bir tane .xml dosyası olması lazım.
@@ -112,13 +116,11 @@ Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket
 Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train için TFRecord dosyası oluşturun. Komutları çalıştırdıktan sonra object_detection klasöründe test.record ve train.record dosyaları yaratılacak.
 
    python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
-   python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.rec
+   python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
     
     
     
 
-    
- ![screenshot from 2018-12-01 06-43-42](https://user-images.githubusercontent.com/45830441/49906023-2e8c8f00-fe81-11e8-8787-160a88d1ee43.png)
-    
+
     
     

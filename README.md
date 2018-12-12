@@ -2,30 +2,54 @@
 
 Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
 Öncelikle gerekli olan platformların kurulumunun yapılması 
-## KURULUMLAR
+## 1. KURULUM İŞLEMLERİ
 
-### Anaconda
+### ANACONDA
 - https://www.anaconda.com/download/
 - İsterseniz yukarıdaki linkten son Anaconda'nın son sürümünü kurmak yerine aşağıdaki linkle 5.1 sürümünü kurabilirsiniz. Anaconda 5.1 daha stabil çalışıyor. 5.1 ile pek hata almazsınız.
 - 64-bit Anaconda indirip kurun. Ayrıca Python kurulumu yapmanıza gerek yok. Python Anaconda'yla birlikte gelecek.
 - Son güncellemeyle beraber Anaconda Python 3.7 ile beraber gelecektir. Kurstaki kütüphanelerin sorunsuz çalışması için aşağıdaki komutu komut penceresinde çalıştırarak Python 3.6'ya geçin.
- 
-    conda install python=3.6
- ### TENSORFLOW
+
+  #### ANACONDA VIRTUAL ENVIRONMENT KURULUMU
+
+Komut penceresini yönetici olarak açın. Virtual environment oluşturmak için aşağıdaki komutu yazın:
+
+   conda create -n tensorflow1 pip python=3.6
+
+Virtual environment'ı aktifleştirmek için aşağıdaki komutu kullanın:
+
+   activate tensorflow1
+
+Virtual environment aktifleştiyse parantez içerisinde (tensorflow1) göreceksiniz. Bu virtual environment üzerinde tek tek aşağıdaki tüm kütüphaneleri kurun:
+
+
+   
+   (tensorflow1) $ conda install -c anaconda protobuf
+   
+   (tensorflow1) $ pip install pillow
+   
+   (tensorflow1) $ pip install lxml
+   
+   (tensorflow1) $ pip install jupyter
+   
+   (tensorflow1) $ pip install matplotlib
+   
+   (tensorflow1) $ pip install pandas
+   
+   (tensorflow1) $ pip install opencv-python
+   
+   (tensorflow1) $ pip install imageio
+   
+  ###### NOT:
+   Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. 
+
+### TENSORFLOW
  
  - Tensorflow kurarken iki seçeneğiniz var. CPU veya GPU. Eğer uygun ekran kartınız varsa kesinlikle GPU için kurulum yapın, CPU'ya göre daha hızlı eğitim gerçekleşecek. Nvidia'dan farklı bir ekran kartınız varsa CPU için kurulum yapmanız gerekiyor. Sadece Nvidia ekran kartları destekleniyor. Ekran kartınızda CUDA compute capability 3.5'den büyükse Tensorflow'u GPU için kurabilirsiniz. Aşağıdaki linkten ekran kartınız uygun mu kontrol edebilirsiniz.
-    
- #### 1. Tensorflow CPU
  
- #### pip install --upgrade tensorflow
- 
- ### Diğer Kütüphaneler
- 
-- Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. Kursta kullanacağımız aşağıdaki iki kütüphanenin kurulu olduğuna emin olun.
- 
-    pip install opencv-python
-    
-    pip install imageio
+   (tensorflow1) $ pip install --ignore-installed --upgrade tensorflow-cpu
+     
+
     
  ### Tensorflow Object Detection Kurulumu 
 
@@ -36,9 +60,22 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
  - Eğitim yapabilmek için bilgisayarınızın özelliklerine en uygun olan modeli
  https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md den indilebilirsiniz.Bize uygun olan model olarak  Faster-RCNN-Inception-V2-COCO'yu indirin. tar.gz dosyasını object detection klasörüne çıkartın.  
  
+ 
+ ## 2. RESİM TOPLAYIP ETİKETLEME
+
+Kendi istediğiniz nesneleri eğitmek istiyorsanız öncelikle bir dataset oluşturmanız lazım. İnternetten veya kendi çektiğiniz foroğraflarla belli bir sayıda resim toplayın. Resimler farklı ortamlarda olursa daha güçlü bir model eğitebilirsiniz. Nesnenin sadece tek bir açıdan çekilmiş resimlerini kullanırsanız iyi sonuçlar almazsınız. Yani datasetinizde çeşitlilik bol olsun. Nesnenin bazı yerleri kapatılmış şekilde ve farklı ışıklandırmalarda resimleri toplayın. 
+
+
+Resimleri topladıktan sonra %20'sini \object_detection\images\test klasörüne %80'ini \object_detection\images\train klasörüne atın.
+
+Resimleri uygun klasörlere attıktan sonra hepsini tek tek etiketlemeniz gerekiyor. Labellmg ile tüm resimlerdeki tanımak istediğiniz nesneleri tek tek seçerek etiketleme yapın.
+
+Github: https://github.com/tzutalin/labelImg
+ 
+ ![]_(/home/sedefkilicceken/Desktop/demo3.jpg)   
     
-    
-    
+ 
+
     
     
     

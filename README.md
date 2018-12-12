@@ -1,6 +1,8 @@
-# tensorflow_dataset_olusturmas-1
-Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
-## Öncelikle gerekli olan platformların kurulumunun yapılması 
-Kurulumlar
+# TENSORFLOW KULLANARAK  DATASET OLUŞTURMA
 
-# - Anaconda
+Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
+
+## Öncelikle gerekli olan platformların kurulumunun yapılması 
+## KURULUMLAR
+
+### Anaconda

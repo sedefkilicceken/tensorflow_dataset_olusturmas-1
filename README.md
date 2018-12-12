@@ -10,7 +10,7 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
 - 64-bit Anaconda indirip kurun. Ayrıca Python kurulumu yapmanıza gerek yok. Python Anaconda'yla birlikte gelecek.
 - Son güncellemeyle beraber Anaconda Python 3.7 ile beraber gelecektir. Kurstaki kütüphanelerin sorunsuz çalışması için aşağıdaki komutu komut penceresinde çalıştırarak Python 3.6'ya geçin.
  
- ####conda install python=3.6
+ #### conda install python=3.6
  
  ###TENSORFLOW
  
@@ -18,5 +18,5 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
  
  ## 1. Tensorflow CPU
  
- ####pip install --upgrade tensorflow
+ #### pip install --upgrade tensorflow
  

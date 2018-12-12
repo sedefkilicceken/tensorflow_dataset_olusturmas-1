@@ -20,4 +20,7 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
  
  #### pip install --upgrade tensorflow
  
- <br> CPU için kurulum bu kadar. Komut penceresinde "python" yazıp aşağıdaki kod ile test edebilirsiniz:</br>
+ Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. Kursta kullanacağımız aşağıdaki iki kütüphanenin kurulu olduğuna emin olun.
+
+    pip install opencv-python
+    pip install imageio

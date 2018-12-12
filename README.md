@@ -116,7 +116,7 @@ Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train i�
     
     
     
-    ![labelImg](/home/sedefkilicceken/Pictures/Screenshot from 2018-12-01 06-43-42.png)
+ ![labelImg]("/home/sedefkilicceken/Pictures/Screenshot from 2018-12-01 06-43-42.png")
     
     
     

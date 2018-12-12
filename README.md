@@ -12,35 +12,33 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
 
   #### ANACONDA VIRTUAL ENVIRONMENT KURULUMU
 
-Komut penceresini yönetici olarak açın. Virtual environment oluşturmak için aşağıdaki komutu yazın:
-
-   conda create -n tensorflow1 pip python=3.6
+ Komut penceresini yönetici olarak açın. Virtual environment oluşturmak için aşağıdaki komutu yazın:
+  
+    conda create -n tensorflow1 pip python=3.6
 
 Virtual environment'ı aktifleştirmek için aşağıdaki komutu kullanın:
 
-   activate tensorflow1
+    activate tensorflow1
 
 Virtual environment aktifleştiyse parantez içerisinde (tensorflow1) göreceksiniz. Bu virtual environment üzerinde tek tek aşağıdaki tüm kütüphaneleri kurun:
 
-
+    (tensorflow1) $ conda install -c anaconda protobuf
    
-   (tensorflow1) $ conda install -c anaconda protobuf
+    (tensorflow1) $ pip install pillow
    
-   (tensorflow1) $ pip install pillow
+    (tensorflow1) $ pip install lxml
    
-   (tensorflow1) $ pip install lxml
+    (tensorflow1) $ pip install jupyter
    
-   (tensorflow1) $ pip install jupyter
+    (tensorflow1) $ pip install matplotlib
    
-   (tensorflow1) $ pip install matplotlib
+    (tensorflow1) $ pip install pandas
    
-   (tensorflow1) $ pip install pandas
+    (tensorflow1) $ pip install opencv-python
    
-   (tensorflow1) $ pip install opencv-python
+    (tensorflow1) $ pip install imageio
    
-   (tensorflow1) $ pip install imageio
-   
-  ###### NOT:
+###### NOT:
    Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. 
 
 ### TENSORFLOW
@@ -51,7 +49,7 @@ Virtual environment aktifleştiyse parantez içerisinde (tensorflow1) göreceksi
      
 
     
- ### Tensorflow Object Detection Kurulumu 
+ #### Tensorflow Object Detection Kurulumu 
 
 - TensorFlow Object Detection API'ı indirin. https://github.com/tensorflow/models
 
@@ -86,7 +84,7 @@ Github: https://github.com/tzutalin/labelImg
 NOT: Etiketlerde Türkçe karakter olmasın.
     
     
-##3. Eğitim Verisi Oluşturma
+## 3. Eğitim Verisi Oluşturma
 
 Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket bilgisini barındıran .xml dosyalarını .csv dosyasına çevireceğiz. Bunu yapmak için komut penceresinde object_detection klasöründe olmanız gerekiyor. Daha sonra aşağıdaki komutu çalıştırın. Images klasöründe 2 tane .csv dosyası oluşacak.
 
@@ -95,7 +93,7 @@ Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket
 .csv dosyaları oluşturulduktan sonra generate_tfrecord.py dosyasını herhangi bir text editor ile açın. 31. satırda sınıf bilgilerinizi girin. Benim datasetimde 1  tane sınıf olduğu için 1 tane farklı ID atadım. Sınıf sayınıza göre bunları değiştirerek 1'den başlayarak sınıf sayınız kadar ID atayın.
 
     
-   def class_text_to_int(row_label):
+    def class_text_to_int(row_label):
         if row_label == 'azizsancar':
             return 1
   
@@ -103,7 +101,7 @@ Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket
 Örnek olarak eğer sınıflarınız kedi, köpek, at ise yukarıdaki kodu aşağıdaki şekilde düzenlemeniz gerekir.
 
    
-   def class_text_to_int(row_label):
+    def class_text_to_int(row_label):
         if row_label == 'kedi':
             return 1
         elif row_label == 'kopek':
@@ -115,8 +113,8 @@ Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket
 
 Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train için TFRecord dosyası oluşturun. Komutları çalıştırdıktan sonra object_detection klasöründe test.record ve train.record dosyaları yaratılacak.
 
-   python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
-   python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
+    python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
+    python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
     
     
     

@@ -74,17 +74,49 @@ Github: https://github.com/tzutalin/labelImg
 
 ![labelImg](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg)
  
+![labelImg](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo.jpg)
+
+ Her etiketlediğiniz resim için .xml dosyası oluşturulacak. Bu .xml dosyaları tfrecords'a çevirilerek eğitim yapılacak. 
+ Test ve train klasörleri içerisindeki her resim için bir tane .xml dosyası olması lazım.
+
+NOT: Etiketlerde Türkçe karakter olmasın.
+    
+    
+##3. Eğitim Verisi Oluşturma
+
+Her resmi etiketledikten sonra TFRecord oluşturmak gerekiyor. Öncelikle etiket bilgisini barındıran .xml dosyalarını .csv dosyasına çevireceğiz. Bunu yapmak için komut penceresinde object_detection klasöründe olmanız gerekiyor. Daha sonra aşağıdaki komutu çalıştırın. Images klasöründe 2 tane .csv dosyası oluşacak.
+
+    (tensorflow1) $ \tensorflow1\models\research\object_detection> python xml_to_csv.py
+
+.csv dosyaları oluşturulduktan sonra generate_tfrecord.py dosyasını herhangi bir text editor ile açın. 31. satırda sınıf bilgilerinizi girin. Benim datasetimde 1  tane sınıf olduğu için 1 tane farklı ID atadım. Sınıf sayınıza göre bunları değiştirerek 1'den başlayarak sınıf sayınız kadar ID atayın.
 
     
+   def class_text_to_int(row_label):
+        if row_label == 'azizsancar':
+            return 1
+  
+
+Örnek olarak eğer sınıflarınız kedi, köpek, at ise yukarıdaki kodu aşağıdaki şekilde düzenlemeniz gerekir.
+
+   
+   def class_text_to_int(row_label):
+        if row_label == 'kedi':
+            return 1
+        elif row_label == 'kopek':
+            return 2
+        elif row_label == 'at':
+            return 3
+        else:
+            None
+
+Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train için TFRecord dosyası oluşturun. Komutları çalıştırdıktan sonra object_detection klasöründe test.record ve train.record dosyaları yaratılacak.
+
+   python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
+   python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.rec
     
     
     
-    
-    
-    
-    
-    
-    
+    ![labelImg](/home/sedefkilicceken/Pictures/Screenshot from 2018-12-01 06-43-42.png)
     
     
     

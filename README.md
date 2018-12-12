@@ -71,9 +71,8 @@ Resimleri topladıktan sonra %20'sini \object_detection\images\test klasörüne 
 Resimleri uygun klasörlere attıktan sonra hepsini tek tek etiketlemeniz gerekiyor. Labellmg ile tüm resimlerdeki tanımak istediğiniz nesneleri tek tek seçerek etiketleme yapın.
 
 Github: https://github.com/tzutalin/labelImg
- 
- ![]_(/home/sedefkilicceken/Desktop/demo3.jpg)   
-    
+
+![labelImg](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg)
  
 
     

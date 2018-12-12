@@ -119,7 +119,7 @@ Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train i�
 
     
     
-    
+    ![screenshot from 2018-12-01 06-43-42](https://user-images.githubusercontent.com/45830441/49906023-2e8c8f00-fe81-11e8-8787-160a88d1ee43.png)
     
     
     

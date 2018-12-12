@@ -21,7 +21,8 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
  
  ### Diğer Kütüphaneler
  
- Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. Kursta kullanacağımız aşağıdaki iki kütüphanenin kurulu olduğuna emin olun.
+- Ne zaman eksik bir kütüphane varsa Tensorflow kurarken yaptığımız gibi pip install ile kurabilirsiniz. Kursta kullanacağımız aşağıdaki iki kütüphanenin kurulu olduğuna emin olun.
+ 
     pip install opencv-python
     pip install imageio
     

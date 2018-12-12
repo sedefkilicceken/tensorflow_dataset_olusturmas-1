@@ -5,3 +5,4 @@ Tensorflow teknolojisi kullanarak kendi datasetimizi oluşturma
 ## KURULUMLAR
 
 ### Anaconda
+- https://www.anaconda.com/download/

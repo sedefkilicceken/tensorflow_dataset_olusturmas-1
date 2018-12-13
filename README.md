@@ -80,6 +80,8 @@ Github: https://github.com/tzutalin/labelImg
 
  Her etiketlediğiniz resim için .xml dosyası oluşturulacak. Bu .xml dosyaları tfrecords'a çevirilerek eğitim yapılacak. 
  Test ve train klasörleri içerisindeki her resim için bir tane .xml dosyası olması lazım.
+ 
+ ![screenshot from 2018-12-13 03-02-14](https://user-images.githubusercontent.com/45830441/49906589-8fb56200-fe83-11e8-914e-022c365e8893.png)
 
 NOT: Etiketlerde Türkçe karakter olmasın.
     

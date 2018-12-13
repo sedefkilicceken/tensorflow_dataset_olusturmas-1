@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>fft351-mf25862170.Jpeg</filename>
+	<path>/home/sedefkilicceken/Desktop/tensorflow1/models/research/object_detection/images/test/fft351-mf25862170.Jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>635</width>
+		<height>445</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>azizsancar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>181</xmin>
+			<ymin>65</ymin>
+			<xmax>413</xmax>
+			<ymax>345</ymax>
+		</bndbox>
+	</object>
+</annotation>

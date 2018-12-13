@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>a23.jpeg</filename>
+	<path>/home/sedefkilicceken/Desktop/tensorflow1/models/research/object_detection/images/test/a23.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>296</width>
+		<height>170</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>azizsancar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>174</xmin>
+			<ymin>7</ymin>
+			<xmax>278</xmax>
+			<ymax>112</ymax>
+		</bndbox>
+	</object>
+</annotation>

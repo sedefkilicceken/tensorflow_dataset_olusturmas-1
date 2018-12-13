@@ -84,6 +84,9 @@ Github: https://github.com/tzutalin/labelImg
  ![screenshot from 2018-12-13 03-02-14](https://user-images.githubusercontent.com/45830441/49906589-8fb56200-fe83-11e8-914e-022c365e8893.png)
 
 NOT: Etiketlerde Türkçe karakter olmasın.
+
+Örnek bir xml çıktısı
+![screenshot from 2018-12-13 03-04-45](https://user-images.githubusercontent.com/45830441/49906677-f63a8000-fe83-11e8-8141-6d32c5b02d5e.png)
     
     
 ## 3. Eğitim Verisi Oluşturma

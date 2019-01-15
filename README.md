@@ -123,6 +123,67 @@ Sınıflarınıza ID verdikten sonra aşağıdaki komutlar hem test hem train i�
     
     
     
+    
+    
+ ## Label Map Oluşturma 
+Label map modele hangi ID'de hangi sınıf var onu söylemektedir.İlk işlem olarak  object_detection/training klasörüne gidin ve yeni bir dosya oluşturun. Oluşturduğunuz dosyanın ismine "labelmap.pbtxt" verin (uzantısı .pbtxt olması lazım .txt vermeyin). Dosyayı text editor ile açıp aşağıdaki şekilde sınıf ve ID bilgilerini girin. Bu sınıf ID'leri kendi veri setinize  göre düzenlemeniz gerekiyor
+Eğer sınıflar aşağıdaki kedi, köpek, at olsaydı bu dosyanın içeriği şu şekilde olmalıydı:
+item
+ {
+ id: 1
+name: 'kedi'
+}
+
+item 
+{
+ id: 2
+name: 'kopek'
+}
+
+item 
+{
+ id: 3
+name: 'at'
+}
+
+
+
+Kulandığım  sınıf sadece azizsancar olduğu için dosya içeriği şu şekilde  düzenlenmeli:
+İtem
+{
+ id: 1
+name: 'azizsancar'
+}
+
+
+ ## Eğitim Ayarları
+Bu aşamada hangi model ve hangi parametreler kullanılacak belirliyoruz.
+1.	C:\tensorflow1\models\research\object_detection\samples\configs klasörüne gidin
+2.	faster_rcnn_inception_v2_pets.config dosyasını kopyalayıp object_detection\training klasörüne yapıştırın. 
+3.	Text editor ile bu dosyayı açın ve aşağıdaki değişiklikleri yapın.
+•	9. satır: Buraya sınıf sayınızı yazın. Kullandığım sınıf 1 tane olduğu için 1 olarak düzenlenlenmelidir
+•	110. satır: fine_tune_checkpoint'e aşağıdaki satırı verin. (Hangi modeli kullanmak istiyorsanız onu verin)
+fine_tune_checkpoint : "C:/tensorflow1/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
+•	126 ve 128. satır: train_input_reader içerisinde input_path ve label_map_path belirleyin. Bunları aşağıdaki satırlardaki gibi değiştirin.
+input_path : "C:/tensorflow1/models/research/object_detection/train.record"
+label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
+
+•	132. satır: Bu satırda num_examples'a kaç tane test resminiz varsa onu vereceksiniz. images\test klasöründe kaç tane test resminiz olduğunu öğrenebilirsiniz. Ben de 67 tane var. O yüzden num_examples: 67 yazmam gerekiyor.
+•	140 ve 142. satır: eval_input_reader içerisinde input_path ve label_map_path belirleyin. Bunları aşağıdaki satırlardaki gibi değiştirin.
+input_path : "C:/tensorflow1/models/research/object_detection/test.record"
+label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
+
+Yaptığınız değişiklikleri kaydedin.
+
+Eğitimi Gerçekleştirme
+Eğitimi çalıştırmak için aşağıdaki komutu /object_detection klasörü içerisinde çalıştırın.
+
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
+
+Aşağıda eğitimin 2000 adımında oluşan loss değerleri gösterilmektedir.
+
+    
+    
 
 
     

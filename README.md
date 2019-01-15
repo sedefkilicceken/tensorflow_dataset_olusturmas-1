@@ -213,7 +213,7 @@ Aşağıda eğitimin 2000 adımında oluşan loss değerleri gösterilmektedir.
 
 Aşağıdaki komutla  eğitimi Tensorboard'da takip etmek için çalıştırın :
 
-![](tensorflow-test/Adsiz.png)
+![](tensorflow-test/Adsız.png)
 
 ## Program Çıktıları:
 4000 adım çıktıları aşağıda verilmiştir.

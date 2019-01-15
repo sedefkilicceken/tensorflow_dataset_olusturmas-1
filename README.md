@@ -199,7 +199,7 @@ Eğitimi çalıştırmak için aşağıdaki komutu /object_detection klasörü i
 
 Aşağıda eğitimin 2000 adımında oluşan loss değerleri gösterilmektedir.
 
-    
+![](tensorflow-test/adsiz-2000.png)
     
 
 

@@ -215,18 +215,35 @@ Aşağıdaki komutla  eğitimi Tensorboard'da takip etmek için çalıştırın 
 
 ![](tensorflow-test/Adsiz.png)
 
-#Program Çıktıları:
+## Program Çıktıları:
 4000 adım çıktıları aşağıda verilmiştir.
+
+
 4000 adım çıktılarında yüz ayrımı yapabilmektedir.
+
+
 ![](tensorflow-test/20181219_161930.jpg)
+
+
 ![](tensorflow-test/20181219_162038.jpg)
-![](tensorflow-test/IMG-20181219-WA0013.jpg)
+
+
+
 ![](tensorflow-test/IMG-20181219-WA0015.jpg)
+
+
 4000 adım olmasına rağmen  yüz haricinde diğer nesneleri algılamamaktadır.
+
+
 ![](tensorflow-test/IMG-20181219-WA0012.jpg)
 
 
+Resimlerde görültüğü gibi  4K eğitim sonucunda sadece insan suratı olup olmadığı ayrılmaktadır.Nesneleri algılamaması, ilk  fotoğrafta köpeği algılamaması, kağıtları tanımaması en azından eğitimin olumlu yönde ilerlediğini göstermektedir.
 
+
+
+## Eğitim Sonuçları 
+Eğitimin  olumlu sonuç vermesi için en az 50K adım eğitilmesi gerekilmektedir.Fakat tensorFlow cpu kullanması, bilgisayarın donanımsal aksaklıkları ve yetersizlikleri neticesinde eğitim süresi olduğundan fazla sürdü.4K’lık adımı 2 günde yapması 50K  adım eğitim sürecinin çok uzun olacağını  bu yüzden de  veri toplayıp eğitme yöntemini bir hayli zor olduğu kanısınna varılmıştır.
 
 
 

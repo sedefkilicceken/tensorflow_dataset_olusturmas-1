@@ -200,9 +200,36 @@ Eğitimi çalıştırmak için aşağıdaki komutu /object_detection klasörü i
 Aşağıda eğitimin 2000 adımında oluşan loss değerleri gösterilmektedir.
 
 ![](tensorflow-test/adsiz-2000.png)
+
+•	Eğitimin başlaması 30 saniye, 1 dakika kadar sürecektir. Adım adım eğitildiğini görüyorsanız eğitim yapılıyor demektir. Her adımda ekrana loss yazdırılacak. Loss'ı takip ederek dilediğiniz kadar eğitin. Benim tavsiyem en az 50 bin adım eğitme yapılarak olumlu sonuç elde edilmektedir. Veri setinize ve modelinize bağlı olarak daha az veya daha fazla eğitim yapmanız da gerekebilir Loss'ı takip ederek bir noktadan sonra grafiğin düzleştiğini gözlemlerseniz eğitimi durdurabilirsiniz. Eğitimi durdurmak için Ctrl+C tuşlarına basın.Belli aralıklarla kaydediliyor kapattıktan sonra kaldığınız yerden eğitime devam edebilirsiniz.Lossları incelediğinizde değerlerinin sıfıra yaklaşması gerekmektedir aksi durumda eğitim gerçekleşmiyor demektir.
+
+
+
  Aşağıda eğitimin 4000 adımında oluşan loss değerleri gösterilmektedir.
+ Eğitimin 4000 ‘nci adımında oluşan loss değerleri gösterilmektedir.Ve değerlerin sıfıra yaklaşıldığı görülmektedir.
+
  
 ![](tensorflow-test/adsiz-4000.png)
+
+Aşağıdaki komutla  eğitimi Tensorboard'da takip etmek için çalıştırın :
+
+![](tensorflow-test/Adsiz.png)
+
+#Program Çıktıları:
+4000 adım çıktıları aşağıda verilmiştir.
+4000 adım çıktılarında yüz ayrımı yapabilmektedir.
+![](tensorflow-test/20181219_161930.jpg)
+![](tensorflow-test/20181219_162038.jpg)
+![](tensorflow-test/IMG-20181219-WA0013.jpg)
+![](tensorflow-test/IMG-20181219-WA0015.jpg)
+4000 adım olmasına rağmen  yüz haricinde diğer nesneleri algılamamaktadır.
+![](tensorflow-test/IMG-20181219-WA0012.jpg)
+
+
+
+
+
+
     
 
     
